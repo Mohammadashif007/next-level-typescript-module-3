@@ -43,25 +43,33 @@
 
 
 
-    class Country {
-        constructor(public capital:string, public name:string, public currency:string){};
-        getCountry(){
-            console.log(`The ${this.capital} is the capital of ${this.name}. And currency is ${this.currency}`);
+    // class Country {
+    //     constructor(public capital:string, public name:string, public currency:string){};
+    //     getCountry(){
+    //         console.log(`The ${this.capital} is the capital of ${this.name}. And currency is ${this.currency}`);
+    //     }
+    // }
+
+    // const bangladesh = new Country("Dhaka", "Bangladesh", "Taka");
+    // const pakistan = new Country("Islamabad", "Pakistan", "Rupee");
+    // const america = new Country("Washington D.C", "America", "Dollars");
+    // const turkey = new Country("Ankara", "Turkey", "Lira");
+
+    // bangladesh.getCountry()
+    // pakistan.getCountry()
+    // america.getCountry()
+    // turkey.getCountry()
+
+    class Cars {
+        constructor(public name:string, public color:string, public country: string){}
+        getDetails(){
+            console.log(`The ${this.name} of ${this.color} originated in ${this.country}`);
         }
     }
 
-    const bangladesh = new Country("Dhaka", "Bangladesh", "Taka");
-    const pakistan = new Country("Islamabad", "Pakistan", "Rupee");
-    const america = new Country("Washington D.C", "America", "Dollars");
-    const turkey = new Country("Ankara", "Turkey", "Lira");
+    const lamborghini = new Cars("Huracan", "Yellow", "Italy");
 
-    bangladesh.getCountry()
-    pakistan.getCountry()
-    america.getCountry()
-    turkey.getCountry()
-
-
-
+    lamborghini.getDetails()
 
 
 

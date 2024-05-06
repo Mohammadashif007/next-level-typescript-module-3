@@ -1,4 +1,4 @@
-{ //! access modifiers
+{ //! getter and setter
 
 
     class BankAccount {
@@ -15,16 +15,35 @@
             this._balance  = this._balance + amount;
         }
 
-        getBalance(){
+        // getBalance(){
+        //     return this._balance;
+        // }
+
+        // ! use getter
+
+        get balance(){
             return this._balance;
         }
+
+        // ! use setter
+
+        set deposit(x:number){
+           this._balance = this._balance + x;
+        }   
     }
 
 
     const user1 = new BankAccount(1, "User", 200);
-    user1.addDeposit(200);
-    const balance = user1.getBalance();
-    console.log(balance);
+    // user1.addDeposit(200);
+    user1.deposit = 400
+
+    // const balance = user1.getBalance();
+    // console.log(balance);
+
+    const totalBalance = user1.balance;
+    console.log(totalBalance);
+    
+    
 
 
 
